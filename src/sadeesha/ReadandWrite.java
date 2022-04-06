@@ -13,14 +13,15 @@ public class ReadandWrite {
         System.out.println("Enter the desired text: ");
 
         String text = userTextScan.nextLine();
+
         //endregion
 
         //region - writing to a file
         //this File Writer throws a IO exception. Hence, we are handling it using a try catch block
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("output_file.txt"));
-            writer.write(text);
-            writer.close(); // #---- Always make sure to close the file. Otherwise, nothing will be written into file ----#
+            BufferedWriter writer = new BufferedWriter(new FileWriter("output_file.txt", true));
+            writer.write("\n" + text);
+            writer.close(); // #---- Always make sure to close the BufferWritter object. Otherwise, nothing will be written into the file ----#
         } catch (IOException e) {
             e.printStackTrace();
         }
