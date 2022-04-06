@@ -1,3 +1,4 @@
 
 Hi there!
 Writing to the file is working perfectly.
+Reading from the file is also working perfectly.
